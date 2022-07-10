@@ -25,6 +25,7 @@ img{
 .customBtn {
     margin-top: 5px;
     margin-bottom: 5px;
+    width: 100%;
 }
 
 .current{
@@ -32,6 +33,7 @@ img{
     border-style: solid;
     border-color: black;
     height: 200px;
+    margin-top: -50px;
 }
 
 .card-title{
@@ -39,3 +41,10 @@ img{
     flex-direction: column;
 }
 
+.custCard{
+    width: 10rem;
+    color: white;
+    background-color:rgb(53, 60, 81);
+    border: none;
+    margin-right: 20px;
+}

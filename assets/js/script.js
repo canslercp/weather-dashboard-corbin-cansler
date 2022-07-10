@@ -1,4 +1,4 @@
-//pseudo code:
+
 //User types city into search bar and clicks search
 var searchForm = document.querySelector('#searchForm');
 
@@ -6,16 +6,12 @@ searchForm.addEventListener('submit', (event)=> {
     event.preventDefault();
 
     var city = document.querySelector('#searchBar').value;
-    console.log(city);
-
-
-
+ 
 //Geocoding API use to convert city name to lat and lon
-//var city = 'raleigh'
 var date = moment().format("L");
 var cityHeader = document.querySelector('#cityHeader');
-var requestCoord = 'http://api.openweathermap.org/geo/1.0/direct?q='+city+',US&limit=5&appid=19d4050be39e995449aeeac86b7e3bec'
-
+var requestCoord = 'https://api.openweathermap.org/geo/1.0/direct?q='+(city) +',US&limit=5&appid=19d4050be39e995449aeeac86b7e3bec'
+  
 fetch(requestCoord).then(function(responseOne){
    return responseOne.json();
 })
@@ -58,12 +54,6 @@ fetch(requestCoord).then(function(responseOne){
     uvIndex.textContent = 'UV Index: ' + data.current.uvi;
 
 // Weather display for 5-day forcast
-    // for(var i = 0; i < 5; i++ ){
-    //     var dailyData = data.daily[i]; 
-        
-    //     var nextDate = moment().add([i+1],'days').format("L");
-    //     console.log(nextDate);
-    // } 
   
 //Day 1 of 5-day forcast generator
     var dayOne = document.querySelector('#dayOne');
@@ -150,6 +140,7 @@ fetch(requestCoord).then(function(responseOne){
    var humidityFive = document.querySelector('#humidityFive');
    humidityFive.textContent = 'Humidity: ' + data.daily[4].humidity + ' %'; 
  })
- 
+
 })
+searchForm.reset();
 })
