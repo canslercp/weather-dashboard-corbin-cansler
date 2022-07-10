@@ -1,0 +1,41 @@
+header{
+    background-image: linear-gradient(to right, rgb(63, 97, 184) , rgb(16, 23, 76)); ;
+    color: white;
+    font-family: sans-serif;
+    font-size:x-large;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+img{
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+    margin-bottom: -20px;
+}
+
+.searchBtn{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.customBtn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.current{
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    height: 200px;
+}
+
+.card-title{
+    display: flex;
+    flex-direction: column;
+}
+
